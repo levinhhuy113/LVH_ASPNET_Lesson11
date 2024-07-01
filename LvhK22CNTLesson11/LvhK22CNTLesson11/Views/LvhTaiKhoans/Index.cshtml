@@ -1,0 +1,69 @@
+﻿@model IEnumerable<LvhK22CNTLesson11.Models.LvhTaiKhoan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LvhId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LvhId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LvhId })
+        </td>
+    </tr>
+}
+
+</table>

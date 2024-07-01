@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LvhLesson11DbsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LvhTaiKhoan">
+    <Key>
+      <PropertyRef Name="LvhId" />
+    </Key>
+    <Property Name="LvhId" Type="int" Nullable="false" />
+    <Property Name="LvhUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LvhPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="LvhFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LvhAge" Type="int" />
+    <Property Name="LvhEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="LvhPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="LvhStatus" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="LvhLesson11DbsModelStoreContainer">
+    <EntitySet Name="LvhTaiKhoan" EntityType="Self.LvhTaiKhoan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
